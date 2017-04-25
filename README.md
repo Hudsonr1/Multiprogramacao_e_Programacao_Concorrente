@@ -1,3 +1,4 @@
+
 # SISTEMA DE MULTIPROGRAMAÇÃO
 
 <p align="justify">
@@ -28,3 +29,33 @@ Processos na próxima classe de prioridade pode ser executado por no máximo dua
 Quando um processo deseja imprimir um arquivo, ele coloca o nome do arquivo em um diretório especial chamado de spooler directory.
 Um outro processo, o printer daemon, periodicamente verifica se existe algum arquivo a ser impresso, se existir ele imprime o arquivo e remove o nome do arquivo do diretório spooler. 
 </p>
+
+## PROGRAMAÇÃO CONCORRENTE
+
+<p align="justify">
+Do inglês Concurrent Programming, onde Concurrent signifca "acontecendo ao mesmo tempo". Programação Concorrente é diferente de programação paralela!
+Tradicionalmente, a grande maioria dos programas escritos são programas sequenciais Para serem executados em um único computador com uma única CPU. O problema é dividido em uma série de instruções que são executadas uma após a outra, uma única instrução pode executar em um determinado instante de tempo. Nesse caso, existe somente um fluxo de controle (fluxo de execução, linha de execução, thread) no programa. Isso permite, por exemplo, que o programador realize uma "execução imaginária" de seu programa apontando com o dedo, a cada instante, o comando que está sendo executada no momento.
+Um programa concorrente pode ser visto como se tivesse vários fluxos de execução. 
+Para o programador realizar agora uma "execução imaginária", ele vai necessitar de vários dedos, um para cada fluxo de controle
+Em programação cncorrente é definido o uso simultâneo de múltiplos recursos computacionais para resolver um problema, para ser executado em diversas CPUs, o problema é quebrado em partes que podem ser executadas (resolvidas) concorrentemente Cada uma destas partes é representada por uma série de instruções, sendo que as instruções de cada parte são executadas concorrentemente em diferentes CPUs.
+  É comum em sistemas multiusuário que um mesmo programa seja executado simultaneamente por vários usuários.
+Por exemplo, um editor de texto. Entretanto, ter 10 execuções simultâneas do editor de texto não faz dele um programa concorrente. O que se tem são 10 processos independentes executando o mesmo programa seqüencial (compartilhando o mesmo código). Cada processo tem a sua área de dados e ignora a existência das outras execuções do programa, esses processos não interagem entre si (não trocam informações). Neste caso, é usado o termo programação paralela, pois vários programas/processos independentes são executados em paralelo pelo computador. Um programa é considerado concorrente quando ele (o próprio programa, durante a sua execução) origina diferentes processos que  irão interagir entre si para realizar alguma tarefa.
+
+# Paralelismo
+<pre> Processamento simultâneo físico </pre>
+
+# Concorrência
+<pre>
+-> Processamento simultâneo lógico (aparente)
+-> Requer entrelaçamento (interleaving) de ações
+</pre>
+
+# Processo
+<pre> Execução de um programa </pre>
+
+# Programa Concorrente
+<pre> Vários processos que cooperam para a realização de uma tarefa </pre>
+
+
+
+
