@@ -40,6 +40,7 @@ Para o programador realizar agora uma "execução imaginária", ele vai necessit
 Em programação cncorrente é definido o uso simultâneo de múltiplos recursos computacionais para resolver um problema, para ser executado em diversas CPUs, o problema é quebrado em partes que podem ser executadas (resolvidas) concorrentemente Cada uma destas partes é representada por uma série de instruções, sendo que as instruções de cada parte são executadas concorrentemente em diferentes CPUs.
   É comum em sistemas multiusuário que um mesmo programa seja executado simultaneamente por vários usuários.
 Por exemplo, um editor de texto. Entretanto, ter 10 execuções simultâneas do editor de texto não faz dele um programa concorrente. O que se tem são 10 processos independentes executando o mesmo programa seqüencial (compartilhando o mesmo código). Cada processo tem a sua área de dados e ignora a existência das outras execuções do programa, esses processos não interagem entre si (não trocam informações). Neste caso, é usado o termo programação paralela, pois vários programas/processos independentes são executados em paralelo pelo computador. Um programa é considerado concorrente quando ele (o próprio programa, durante a sua execução) origina diferentes processos que  irão interagir entre si para realizar alguma tarefa.
+</p>
 
 # Paralelismo
 <pre> Processamento simultâneo físico </pre>
@@ -55,7 +56,34 @@ Por exemplo, um editor de texto. Entretanto, ter 10 execuções simultâneas do 
 
 # Programa Concorrente
 <pre> Vários processos que cooperam para a realização de uma tarefa </pre>
+ 
+ # Os recursos computacionais podem ser:
+ <pre>
+ 1º - Um único computador com múltiplos processadores;
+ 2º - Um número arbitrário de computadores conectados pela rede;
+ 3º - Uma combinação de ambos.</pre>
+ 
+# O problema computacional geralmente demonstra característcas como a habilidade de ser: 
+<pre>
+° Quebrados em partes de um trabalho que pode ser resolvido de forma simultânea;
+° Executar múltiplas instruções do programa a qualquer momento no tempo;
+° Resolvido em menos tempo com vários recursos de computação do que com um único recurso computacional.
+</pre>
 
+<p align="justify">
+Programação concorrente é mais complexa do que a programação sequencial. Erros dos programas sequenciais + erros associados as interações entre os processos. Erros dependem do momento exato em que o escalonador do SO realiza um chaveamento de contexto ou do recebimento de uma mensagem.
+Apesar da maior complexidade, existem muitas áreas nas quais a programação concorrente é vantajosa. Em sistemas nos quais existem vários processadores (máquinas paralelas ou sistemas distribuídos), é possível aproveitar esse paralelismo e acelerar a execução do programa. Mesmo em sistemas com um único processador, existem razões para o seu uso em vários tipos de aplicações
+</p>
 
-
-
+# Razões da programação concorrente
+<pre>
+<p align="justify">
+° Economizar tempo e dinheiro;
+° Resolver grandes problemas: muitos problemas são tão grandes / complexos que é impraticável ou impossível resolvê-los num único computador, especialmente quando a memória é limitada;
+° Superar as limitações da computação sequencial: razões físicas e práticas restringem a construção de computadores cada vez mais rápido;
+° Arquiteturas de computadores atuais são cada vez mais dependentes do paralelismo em nível de hardware para melhorar o desempenho;
+° Utilizar mais de um computador ou um computador com mais de um processador, para resolver um determinado problema;
+° N computadores operando simultanealmente podem atingir o resultado N vezes mais rápido (não será exatamente N vezes mais rápidos por uma série de razões;
+° Outros motívos incluem: tolerância a falhas, grande quantídade de memória disponível, etc.
+</p>
+</pre>
